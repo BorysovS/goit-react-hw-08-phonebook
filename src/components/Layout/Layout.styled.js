@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import backimg from '../../image/backimg.jpg';
 
 export const Container = styled.div`
-  padding: 20px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #b7c5cb;
+  max-width: 1600px;
+  height: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  background-image: url(${backimg});
 `;
