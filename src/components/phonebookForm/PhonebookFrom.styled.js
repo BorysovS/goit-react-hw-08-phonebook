@@ -10,11 +10,10 @@ export const Form = styled(FormikForm)`
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  width: 600px;
+  width: 500px;
+  height: 250px;
   padding: 20px 32px;
-  border: 1px solid black;
   border-radius: 10px;
-  background-color: #dce6e5;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 `;
@@ -34,21 +33,21 @@ export const FormLabel = styled.span`
 export const LabelName = styled.span`
   font-size: 18px;
   font-weight: 400;
-  text-shadow: -1px 0px 17px rgb(37 174 192 / 90%);
 `;
 
 export const FormBtn = styled.button`
   padding: 12px 20px;
   border: 1px solid transparent;
   border-radius: 12px;
-  background-color: #7cbb97;
+  background-color: rgba(125, 131, 140, 0.24);
   color: white;
   font-size: 18px;
   font-weight: 500;
-  text-shadow: 1px 1px 2px #0a0000, 0 0 1em #0e14ad, 0 0 0.2em #21041e;
+  text-shadow: rgb(10, 0, 0) 1px 1px 2px, rgb(122 123 134) 0px 0px 1em,
+    rgb(33, 4, 30) 0px 0px 0.2em;
   transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   :hover {
-    background-color: #14512e;
+    background-color: rgba(125, 131, 140, 0.76);
   }
 `;
 

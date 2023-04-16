@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { signUp } from '../../redux/auth/operation';
 import { useDispatch } from 'react-redux';
 
+
 const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
 
 export const registerSchema = Yup.object().shape({

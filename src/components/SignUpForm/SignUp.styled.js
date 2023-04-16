@@ -33,21 +33,23 @@ export const FormLabel = styled.span`
 export const LabelName = styled.span`
   font-size: 18px;
   font-weight: 400;
-  text-shadow: -1px 0px 17px rgb(37 174 192 / 90%);
 `;
 
 export const FormBtn = styled.button`
-  padding: 12px 20px;
+  padding: 10px 20px;
+  width: 250px;
+  cursor: pointer;
   border: 1px solid transparent;
   border-radius: 12px;
-  background-color: #7cbb97;
+  background-color: rgba(125, 131, 140, 0.24);
   color: white;
   font-size: 18px;
   font-weight: 500;
-  text-shadow: 1px 1px 2px #0a0000, 0 0 1em #0e14ad, 0 0 0.2em #21041e;
+  text-shadow: rgb(10, 0, 0) 1px 1px 2px, rgb(122 123 134) 0px 0px 1em,
+    rgb(33, 4, 30) 0px 0px 0.2em;
   transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   :hover {
-    background-color: #14512e;
+    background-color: rgba(125, 131, 140, 0.76);
   }
 `;
 

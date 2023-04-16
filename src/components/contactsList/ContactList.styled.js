@@ -5,11 +5,9 @@ export const ContactsList = styled.ul`
   flex-direction: column;
   gap: 12px;
   align-items: center;
-  width: 600px;
+  width: 500px;
   padding: 20px 32px;
-  border: 1px solid black;
   border-radius: 10px;
-  background-color: #dce6e5;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 `;
@@ -26,7 +24,7 @@ export const ListItem = styled.li`
   border-radius: 0 0 4px 4px;
   transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   :hover {
-    background-color: #d4f2f1;
+    background-color: rgba(204, 210, 220, 0.66);
   }
 `;
 
@@ -44,14 +42,15 @@ export const ItemBtn = styled.button`
   padding: 4px 8px;
   border: 1px solid transparent;
   border-radius: 12px;
-  background-color: #7cbb97;
+  background-color: rgba(125, 131, 140, 0.24);
   color: white;
   font-size: 16px;
   font-weight: 500;
-  text-shadow: 1px 1px 2px #0a0000, 0 0 1em #0e14ad, 0 0 0.2em #21041e;
+  text-shadow: rgb(10, 0, 0) 1px 1px 2px, rgb(122 123 134) 0px 0px 1em,
+    rgb(33, 4, 30) 0px 0px 0.2em;
   transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   :hover {
-    background-color: #14512e;
+    background-color: rgba(125, 131, 140, 0.76);
   }
 
   :disabled {
