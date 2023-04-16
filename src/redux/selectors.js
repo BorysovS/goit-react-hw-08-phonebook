@@ -15,3 +15,14 @@ export const selectVisibleContact = createSelector(
     );
   }
 );
+
+// export const selectVisibleContact = state => {
+//   const contacts = selectContacts(state);
+//   const filter = selectFiltered(state);
+
+//   const normalizedFilter = filter.toLowerCase().trim();
+
+//   return contacts.filter(contact =>
+//     contact.name.toLowerCase().includes(normalizedFilter)
+//   );
+// };

@@ -1,8 +1,9 @@
+import { LoginForm } from "components/LoginForm/LoginForm"
 import { ContactList } from "components/contactsList/ContactList"
 
 const LogIn = () => { 
     return (
-        <div><ContactList /></div>
+        <div><LoginForm /></div>
     )
 }
 

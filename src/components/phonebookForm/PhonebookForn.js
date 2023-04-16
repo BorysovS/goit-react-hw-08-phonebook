@@ -22,7 +22,7 @@ const ContactSchema = Yup.object().shape({
       'Name is not valid'
     )
     .required('Required'),
-  phone: Yup.string()
+  number: Yup.string()
     .min(9, 'Format tel: xxx-xx-xx')
     .max(15, 'Format tel: xxx-xx-xx')
     .matches(
@@ -39,19 +39,19 @@ export const ContactForm = () => {
   const handleSubmit = newContact => {
     const normalizeName = newContact.name.toLowerCase();
 
-    if (
-      contacts.find(contact => contact.name.toLowerCase() === normalizeName)
-    ) {
-      toast.error('This contact is alredy in ypur phonebook');
-      return;
-    }
+    // if (
+    //   contacts.find(contact => contact.name.toLowerCase() === normalizeName)
+    // ) {
+    //   toast.error('This contact is alredy in ypur phonebook');
+    //   return;
+    // }
     dispatch(addContact(newContact));
     toast.success('Contacts is add to your phonebook!');
   };
 
   return (
     <Formik
-      initialValues={{ name: '', phone: '' }}
+      initialValues={{ name: '', number: '' }}
       onSubmit={(values, actions) => {
         handleSubmit(values);
         console.log('submit');
@@ -65,10 +65,10 @@ export const ContactForm = () => {
           <Field name="name" placeholder="Name" />
           <ErrorMessage name="name" component="span" />
         </FormLabel>
-        <FormLabel htmlFor="phone">
+        <FormLabel htmlFor="number">
           <LabelName>Number</LabelName>
-          <Field name="phone" placeholder="xxx-xx-xx" />
-          <ErrorMessage name="phone" component="span" />
+          <Field name="number" placeholder="xxx-xx-xx" />
+          <ErrorMessage name="number" component="span" />
         </FormLabel>
         <FormBtn type="submit">Add contact</FormBtn>
       </Form>

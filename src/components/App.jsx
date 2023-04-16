@@ -13,14 +13,18 @@ import Home from 'pages/Home/Home';
 import SignUp from 'pages/Signup/Signup';
 import LogIn from 'pages/Login/Login';
 import Contacts from 'pages/Contacts/Contacts';
+import { PrivateRoute } from './PrivateRoute';
+import { RestrictedRoute } from './RestrictedRoute';
+import { refreshUser } from 'redux/auth/operation';
 
 
 export const App = () => {
   const dispatch = useDispatch();
 
 useEffect(() => {
- dispatch(fetchContacts()) 
+dispatch(refreshUser())
 }, [dispatch])
+
 
 
     return (
@@ -28,9 +32,9 @@ useEffect(() => {
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={ <Home />} />
-            <Route path='/signup' element={<SignUp />} />
-            <Route path='/login' element={<LogIn />} />
-            <Route path='/contacts' element={< Contacts />} />
+            <Route path='/signup' element={<RestrictedRoute redirectTo='/contacts' component={<SignUp />}/>} />
+            <Route path='/login' element={<RestrictedRoute redirectTo='/contacts' component={<LogIn />}/>} />
+          <Route path='/contacts' element={<PrivateRoute redirectTo='/login' component={<Contacts />}/>} />
             </Route>
         </Routes>
       // {/* <h1>Phonebook</h1>
