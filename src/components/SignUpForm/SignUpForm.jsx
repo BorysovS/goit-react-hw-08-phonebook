@@ -48,12 +48,12 @@ const hadleSubmit = values => {
         </FormLabel>
         <FormLabel htmlFor="email">
           <LabelName>Email</LabelName>
-          <Field name="email" placeholder="Email" />
+          <Field name="email" placeholder="Email"/>
           <ErrorMessage name="email" component="span" />
                 </FormLabel>
                 <FormLabel htmlFor="password">
           <LabelName>Password</LabelName>
-          <Field name="password" placeholder="Password" />
+          <Field name="password" placeholder="Password" type='password'/>
           <ErrorMessage name="password" component="span" />
         </FormLabel>
                 <FormBtn type="submit">Sign Up</FormBtn>

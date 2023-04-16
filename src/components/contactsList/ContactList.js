@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   selectVisibleContact,
   selectIsLoading,
-  selectContacts,
+  // selectContacts,
 } from 'redux/selectors';
 import { Loader } from 'components/Loader/Loader';
 import { useEffect } from 'react';

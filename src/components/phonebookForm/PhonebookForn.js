@@ -39,12 +39,12 @@ export const ContactForm = () => {
   const handleSubmit = newContact => {
     const normalizeName = newContact.name.toLowerCase();
 
-    // if (
-    //   contacts.find(contact => contact.name.toLowerCase() === normalizeName)
-    // ) {
-    //   toast.error('This contact is alredy in ypur phonebook');
-    //   return;
-    // }
+    if (
+      contacts.find(contact => contact.name.toLowerCase() === normalizeName)
+    ) {
+      toast.error('This contact is alredy in ypur phonebook');
+      return;
+    }
     dispatch(addContact(newContact));
     toast.success('Contacts is add to your phonebook!');
   };

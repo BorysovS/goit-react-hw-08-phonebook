@@ -44,7 +44,7 @@ export const LoginForm = () => {
           </FormLabel>
           <FormLabel htmlFor="password">
             <LabelName>Password</LabelName>
-            <Field name="password" placeholder="Password" />
+            <Field name="password" placeholder="Password" type='password'/>
             <ErrorMessage name="password" component="span" />
           </FormLabel>
           <FormBtn type="submit">Sign Up</FormBtn>

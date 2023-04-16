@@ -1,9 +1,13 @@
 import { LoginForm } from "components/LoginForm/LoginForm"
-import { ContactList } from "components/contactsList/ContactList"
+import { Container } from "./Logins.styled"
+
 
 const LogIn = () => { 
     return (
-        <div><LoginForm /></div>
+        <Container>
+            <h2>Enter your account</h2>
+            <LoginForm />
+        </Container>
     )
 }
 

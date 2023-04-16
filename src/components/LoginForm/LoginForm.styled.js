@@ -10,17 +10,16 @@ export const Form = styled(FormikForm)`
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  width: 600px;
+  width: 500px;
   padding: 20px 32px;
-  border: 1px solid black;
   border-radius: 10px;
-  background-color: #dce6e5;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 `;
 
 export const ErrorMessage = styled(FormikError)`
   margin-left: 20px;
+  max-width: 200px;
   color: red;
   text-shadow: 1px 2px 12px rgba(185, 6, 6, 1);
 `;

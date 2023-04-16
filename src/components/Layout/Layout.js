@@ -3,6 +3,7 @@ import { AppBar } from '../AppBar/AppBar';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Toaster } from 'react-hot-toast';
+import { GlobalStyle } from 'components/GlobalStyle';
 
 export const Layout = () => {
   return (
@@ -14,6 +15,7 @@ export const Layout = () => {
         </Suspense>
       </Container>
       <Toaster />
+      <GlobalStyle />
     </Body>
   );
 };

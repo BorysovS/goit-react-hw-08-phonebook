@@ -1,12 +1,13 @@
 import { SignUpForm } from "components/SignUpForm/SignUpForm"
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
+import { Container } from "./Sugnup.styled";
 
 const SignUp = () => { 
     return (
-        <div>
-            <h2>Sign Up</h2>
+        <Container>
+            <h2>Create your account</h2>
             <SignUpForm />
-        </div>
+        </Container>
     )
 }
 

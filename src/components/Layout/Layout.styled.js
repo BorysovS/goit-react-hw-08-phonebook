@@ -6,9 +6,9 @@ export const Body = styled.div`
   /* height: 1200px; */
   /* margin: 0 auto;
   padding: 0 16px; */
-  background-image: url(${backimg});
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-image: url(${backimg}); */
+  /* background-repeat: no-repeat;
+  background-size: cover; */
 `;
 
 export const Container = styled.div`
