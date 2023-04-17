@@ -1,20 +1,8 @@
 import { Formik } from 'formik';
 import { ErrorMessage, Field, Form, FormBtn, FormLabel, LabelName } from './LoginForm.styled';
-import * as Yup from 'yup';
 import { logIn } from '../../redux/auth/operation';
 import { useDispatch } from 'react-redux';
 
-const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
-
-export const registerSchema = Yup.object().shape({
-  email: Yup.string().email('Please enter a valid email').required('Required'),
-  password: Yup.string()
-    .min(5)
-    .matches(passwordRules, {
-      message: 'Please create a stronger password',
-    })
-    .required('Required'),
-});
 
 
 const initialValues = {
@@ -34,7 +22,6 @@ export const LoginForm = () => {
                 hadleSubmit(values);
                 action.resetForm()
             }}
-        validationSchema={registerSchema}
       >
         <Form>
           <FormLabel htmlFor="email">
